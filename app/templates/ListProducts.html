@@ -1,0 +1,33 @@
+<section class="content-header">
+  	<h1>Products</h1>
+</section>
+<section class="content">
+  	<div class="row">
+		<div class="col-md-6">
+	      	<div class="box box-primary">
+	        	<div class="box-header with-border">
+	          		<h3 class="box-title">Add New Product</h3>
+	        	</div>
+	        	<form name="settingForm" method="POST" ng-submit="ProductCtrl.create()" novalidate>
+		          	<div class="box-body">
+		            	<div class="form-group">
+		              		<label>Name</label>
+		              		<input type="text" ng-model="ProductCtrl.input.name" class="form-control" placeholder="Product name">
+		            	</div>
+		            	<div class="form-group">
+		              		<label>Price</label>
+		              		<input type="text" ng-model="ProductCtrl.input.price" class="form-control" placeholder="Product price">
+		            	</div>
+		            	<div class="form-group">
+		              		<label>Description</label>
+		              		<textarea class="form-control" rows="3" ng-model="ProductCtrl.input.description" placeholder="Product description"></textarea>
+		            	</div>
+		          	</div>
+		          	<div class="box-footer">
+		            	<button type="submit" ng-disabled="!ProductCtrl.input.name || !ProductCtrl.input.price" ladda="ProductCtrl.createLoading" class="btn btn-primary">Create</button>
+		          	</div>
+	        	</form>
+      		</div>
+  		</div>
+  	</div>
+</section>
